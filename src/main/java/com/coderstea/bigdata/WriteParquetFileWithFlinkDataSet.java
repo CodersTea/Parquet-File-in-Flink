@@ -58,7 +58,7 @@ env.fromCollection(collect)
       DecoderFactory decoderFactory = new DecoderFactory();
       Decoder decoder = decoderFactory.jsonDecoder(schema, employeeJson);
       DatumReader<GenericData.Record> reader = new GenericDatumReader<>(schema);
-      GenericRecord record = reader.read(null, decoder);
+     return  reader.read(null, decoder);
     } catch (IOException e) {
       e.printStackTrace();
     }
